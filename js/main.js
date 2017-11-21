@@ -28,9 +28,10 @@ var gameScore = 0;
 var scoreKeeper = document.getElementById("game-score");
 
 // add game reset function
-var gameOver = function() {
-
-};
+// var gameOver = function() {
+// 	reset the cardsInPlay array;
+// 	reset game without resetting the gameScore;	
+// };
 
 var checkForMatch = function() {
 	
@@ -54,7 +55,7 @@ var flipCard = function() {
 };
 
 var createBoard = function() {
-	
+
 	for (var i = 0; i < cards.length; i++) {
 		var cardElement = document.createElement("img");
 		cardElement.setAttribute("src", "images/back.png");
@@ -62,7 +63,6 @@ var createBoard = function() {
 		cardElement.addEventListener("click", flipCard);
 		document.getElementById("game-board").appendChild(cardElement);	
 	};
-	scoreKeeper.innerHTML = gameScore;
 };
 
 createBoard();
